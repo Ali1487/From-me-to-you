@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>From Me to You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://www.transparenttextures.com/patterns/cream-pixels.png'), #f6f1e7;
+      font-family: 'Special Elite', monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #3e2f2f;
+    }
+
+    .typewriter-box {
+      max-width: 700px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      font-size: 20px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      overflow: hidden;
+      border-left: 4px solid #c19a6b;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background-color: #3e2f2f;
+      margin-left: 3px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="typewriter-box" id="letter">
+    <span id="text"></span><span class="cursor"></span>
+  </div>
+
+  <script>
+    const message = `
+Dear Cousin Sister,
+
+I don’t need a thousand words to tell you this…
+
+I’m sorry.
+
+For the things I said, the behaviour,
+and the ways I treated you.
+
+You are my best best best Cousin Sister — and I must apologies to you.
+
+I want to say more things to and talk to you!!!
+For now I will say that I understood that the thing which was in my mind was just a attraction.I know you also indulge in that things and stuff because of Me(World's Biggest Idiot).
+I am such a fool who crossed all the limts and probably did a sin for which God will not forgive me. I can do only one thing i.e asking for sorry.I just want forgiveness from you.
+
+Please forgive me.
+Let me hold your heart more gently, more truly.
+I want the bond we had before.
+
+If you have forgiven me please give a chance,Now I just need a clear conversation with you.
+
+Forever yours,
+Cousin brother
+    `;
+
+    const textEl = document.getElementById('text');
+    let index = 0;
+
+    function typeWriter() {
+      if (index < message.length) {
+        textEl.textContent += message.charAt(index);
+        index++;
+        setTimeout(typeWriter, 125); // typing speed
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+
+</body>
+</html>
